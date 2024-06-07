@@ -1,11 +1,8 @@
-/* styles.css */
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden; /* Empêche le défilement horizontal */
+    width: 100%;
 }
 
 * {
@@ -16,26 +13,24 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5em; /* Augmente le padding */
     background-color: #333;
-    color: white;
-    width: 100%; /* Assure que le header ne dépasse pas la largeur de l'écran */
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
-header .logo {
-    font-size: 1.5em;
-    margin-right: 2em; /* Ajoute un espace entre le logo et la nav */
+.logo img {
+    width: 150px;
+    height: 150px;
 }
 
-header nav ul {
+nav ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
     display: flex;
 }
 
 header nav ul li {
-    margin-left: 2em; /* Augmente l'espacement entre les éléments de la liste */
+    min-width: 100px; /* Définir une largeur minimale pour les éléments de la liste */
+    text-align: center; /* Centre le texte horizontalement */
 }
 
 header nav ul li a {
@@ -43,29 +38,65 @@ header nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    background-color: #FF7828;
+    padding: 15px;
+    border-radius: 1em; 
+}
+
+nav ul li a.active {
+    background-color: #FF7828;
+    padding: 15px;
+    border-radius: 1em; 
+}
+
 .hero {
     display: flex;
-    justify-content: space-between;
-    padding: 3em 2em; /* Augmente le padding */
-    background-color: #f5f5f5;
-    width: 100%; /* Assure que la section hero ne dépasse pas la largeur de l'écran */
+    overflow: hidden; /* Empêche le débordement de contenu */
+    align-items: center;
+    padding-left: 2em;
+    height: 500px; /* Ajoute de la hauteur à la section */
+    background-color: #CFCFCF;
 }
+
 .text-content {
-    max-width: 50%;
-    margin-right: 2em; /* Ajoute de l'espace entre le texte et l'image */
+    flex: 1; /* Prend autant d'espace que possible */
+    padding: 2em; /* Ajustez selon vos besoins */
+}
+
+.hero_image_container {
+    position: relative;
+}
+
+.hero_image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Assure que l'image couvre toute la largeur */
+    height: 100%; /* Assure que l'image couvre toute la hauteur */
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le conteneur, en conservant les proportions */
+}
+
+.hero_image {
+    position: relative; /* Ajoute une position relative pour pouvoir positionner le pseudo-élément */
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'arrière-plan */
+    background-attachment: fixed; /* Fixe l'image de fond par rapport à la fenêtre du navigateur */
 }
 
 .hero .text-content .buttons {
     display: flex;
-    gap: 20px; /* Augmente l'espacement entre les boutons */
+    gap: 1em; /* Augmente l'espacement entre les boutons */
 }
 
 .cards {
+    margin-top: 2em;
+    margin-bottom: 2em;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1.5em; /* Augmente l'espacement entre les cartes */
     padding: 2em;
     width: 100%; /* Assure que la section des cartes ne dépasse pas la largeur de l'écran */
+    justify-content: center; /* Centre la grille horizontalement */
 }
 
 .card {
@@ -75,23 +106,32 @@ header nav ul li a {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.image {
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-product {
+    height: 200px; /* Définir une hauteur fixe */
+    overflow: hidden; /* Masquer toute partie de l'image qui dépasse */
+}
+
+.image-product img {
     width: 100%;
-}
-
-.image_hero {
-    clip-path: circle(50% at 50% 50%); /* Masque circulaire centré */
+    height: 100%;
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le conteneur, en conservant les proportions */
 }
 
 .content {
-    padding: 1.5em;
+    padding: 1.5em;  /*à l'intérieur de la carte*/
     display: flex;
     flex-direction: column;
 }
 
-h3 {
+h2 {
     margin: 0;
 }
 
@@ -101,20 +141,26 @@ h3 {
     justify-content: end;
 }
 
-.button {
+.button_card {
     background-color: #333;
     border: #333 1px solid;
     border-radius: 1em;
     color: #ccc;
     padding: 15px;
+    text-decoration: none;
+}
+
+.btn-card .button_card:hover {
+    background-color: #FF7828;
+    color: #fff;
+    border: none;
 }
 
 footer {
     text-align: center;
-    padding: 1.5em; /* Augmente le padding */
+    padding: 0.5em; /* Augmente le padding */
     background-color: #333;
     color: white;
     position: relative;
-    bottom: 0;
     width: 100%; /* Assure que le footer ne dépasse pas la largeur de l'écran */
 }

@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Examen Web</title>
+    <title>Whisker Wonderland</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <div class="logo">Logo</div>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
         <nav>
             <ul>
-                <li><a href="#">Homepage</a></li>
+                <li><a href="index.html" class="active">Homepage</a></li>
+                <li><a href="#our-cats">Our cats</a></li>
                 <li><a href="#">About us</a></li>
-                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Doctors</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
@@ -23,98 +27,87 @@
     <main>
         <section class="hero">
             <div class="text-content">
-                <h1>Shoes for Every Journey</h1>
-                <p>Walk with confidence, walk with style<p>
+                <h1>Whisker Wonderland: Adopt Your Cat</h1>
+                <p>Find Your Purrfect Companion Today</p>
                 <div class="buttons">
                     <div class="btn-card">
-                        <a href="">
-                         <button class="button">
-                             See more
-                         </button>
+                        <a href="#" class="button_card">
+                            See more
                         </a>
-                     </div>
-                     <div class="btn-card">
-                        <a href="">
-                         <button class="button">
-                             Contact us
-                         </button>
+                    </div>
+                    <div class="btn-card">
+                        <a href="#" class="button_card">
+                            Contact us
                         </a>
-                     </div>
+                    </div>
                 </div>
             </div>
-            <!-- <div class="image_hero">
-                <img class="image_hero" src="images/chaussure.jpg" alt="Shoes">
-            </div> -->
+            <div class="hero_image_container">
+                <img src="images/black_cat.jpg" alt="Hero Image" class="hero_image">
+            </div>
         </section>
-        <section class="cards">
+        <section class="cards" id="our-cats">
             <div class="card">
                 <div class="image-product">
-                    <img class="image" src="images/chaussure.jpg" alt="Shoes">
+                    <img class="image" src="images/whiskers.avif" alt="Whiskers">
                 </div>
                 <div class="content">
-                    <h3>Shoes</h3>
-                    <p>description</p>
+                    <h2>Whiskers</h2>
+                    <p>Playful Explorer</p>
                     <div class="btn-card">
-                       <a href="">
-                        <button class="button">
-                            Buy me
-                        </button>
-                       </a>
+                        <a href="#" class="button_card">
+                            Adopt me
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-product">
+                    <img class="image" src="images/mittens.webp" alt="Mittens">
+                </div>
+                <div class="content">
+                    <h2>Mittens</h2>
+                    <p>Gentle Affectionate</p>
+                    <div class="btn-card">
+                        <a href="#" class="button_card">
+                            Adopt me
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="card">
                 <div class="image-product">
-                    <img class="image" src="images/chaussure.jpg" alt="Shoes">
+                    <img class="image" src="images/luna.webp" alt="Luna">
                 </div>
                 <div class="content">
-                    <h3>TITRE</h3>
-                    <p>description</p>
+                    <h2>Luna</h2>
+                    <p>Sleek Mysterious</p>
                     <div class="btn-card">
-                        <a href="">
-                         <button class="button">
-                             Buy me
-                         </button>
+                        <a href="#" class="button_card">
+                            Adopt me
                         </a>
-                     </div>
+                    </div>
                 </div>
             </div>
             <div class="card">
                 <div class="image-product">
-                    <img class="image" src="images/chaussure.jpg" alt="Shoes">
+                    <img class="image" src="images/simba.avif" alt="Simba">
                 </div>
                 <div class="content">
-                    <h3>TITRE</h3>
-                    <p>description</p>
+                    <h2>Simba</h2>
+                    <p>Confident Adventurer</p>
                     <div class="btn-card">
-                        <a href="">
-                         <button class="button">
-                            Buy me
-                         </button>
+                        <a href="#" class="button_card">
+                            Adopt me
                         </a>
-                     </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="image-product">
-                    <img class="image" src="images/chaussure.jpg" alt="Shoes">
-                </div>
-                <div class="content">
-                    <h3>TITRE</h3>
-                    <p>description</p>
-                    <div class="btn-card">
-                        <a href="">
-                         <button class="button">
-                            Buy me
-                         </button>
-                        </a>
-                     </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <p>copyright</p>
+        <p>&copy; Iuliana Subbota. All rights reserved.</p>
     </footer>
 </body>
 
